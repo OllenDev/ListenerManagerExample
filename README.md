@@ -3,4 +3,8 @@ ListenerManagerExample
 
 Sample of the Listener Manager Pattern
 
-A friend asked me to write this up for presentation. I also figured it would be nice to have an implementation of several different software patterns out on my github. I hope to keep adding to this as time goes on.
+This pattern is useful for managing a central piece of data and then notifying multiple listeners when it is updated.
+
+This example only has one listener registered, however it I think it gets the point accross.
+
+One downside of this pattern and specifically Android Activities and Fragments is that you have to register and un-register the listener the components go through their life cycle. Failure to unregister can result in a null pointer exception.
