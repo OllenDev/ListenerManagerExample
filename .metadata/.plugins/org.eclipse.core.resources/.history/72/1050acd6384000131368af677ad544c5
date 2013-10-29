@@ -1,0 +1,20 @@
+package com.example.listenermanagerdemo;
+
+import java.util.List;
+import java.util.ArrayList;
+
+public class DataManager {
+	private static DataManager instance;
+	private List<DataListener> listeners;
+	private String message;
+	
+	private DataManager() {
+	}
+	
+	public static DataManager getInstance() {
+		if (instance == null) {
+			instance = new DataManager();
+		}
+		return instance;
+	}
+}

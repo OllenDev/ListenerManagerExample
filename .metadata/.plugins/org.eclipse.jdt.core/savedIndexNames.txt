@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+/Users/ChrisOllenburg/Development/Android/ListenerManager/.metadata/.plugins/org.eclipse.jdt.core
+1669569473.index
+328515920.index
+1019908608.index

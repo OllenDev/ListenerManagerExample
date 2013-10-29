@@ -1,0 +1,40 @@
+package com.example.listenermanagerdemo;
+
+import android.app.Fragment;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+public class Fragment1 extends Fragment implements DataListener {
+	DataManager manager;
+	TextView textview;
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		View rootView = inflater.inflate(R.id.fragment1, container);
+
+		manager = DataManager.getInstance();
+
+		return rootView;
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		manager.registerListener(this);
+	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		manager.removeListener(this);
+	}
+
+	@Override
+	public void dataUpdated(String data) {
+
+	}
+}
